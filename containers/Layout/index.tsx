@@ -4,12 +4,15 @@ import Footer from './Footer';
 import React from 'react';
 import Header from './Header';
 
+// Styles
+import GlobalStyle from '../../global/styles';
+
 interface IProps {
 	title: string,
 	description?: string,
 	url?: string,
 	ogImage?: string,
-	children: React.ReactNode
+	children?: React.ReactNode
 }
 
 const Layout = (props: IProps) => (
@@ -18,6 +21,7 @@ const Layout = (props: IProps) => (
 		<Header />
 		<Body children={props.children} />
 		<Footer />
+		<GlobalStyle />
 	</>
 );
 

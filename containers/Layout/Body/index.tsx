@@ -1,5 +1,5 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 interface IBody {
     children: React.ReactNode
@@ -10,4 +10,8 @@ const Body = (props: IBody) => <BodyContainer>{props.children}</BodyContainer>;
 export default Body;
 
 
-const BodyContainer = Styled.div``
+const BodyContainer = styled.div`
+	height: 100vh;
+	max-width: 1200px;
+	background: var(--light-gray);
+`;
