@@ -6,7 +6,7 @@ const Carousel = () => {
     return (
 		<CarouselContainer>
 			<SliderWrapper>
-				<h1>You Can Find</h1>
+				<h1>Here You Can Find</h1>
 				<Slider>
 					<h2 className="slider__text-1">Validators</h2>
 					<h2 className="slider__text-2">Text Converters</h2>
@@ -21,7 +21,8 @@ export default Carousel;
 
 
 const CarouselContainer = styled.div`
-    height: 100px;
+	background: white;
+    height: 200px;
 `
 
 const slide = keyframes`

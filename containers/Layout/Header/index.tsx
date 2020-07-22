@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import HeaderMenu from './HeaderMenu';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Header = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -16,7 +17,9 @@ const Header = () => {
   return (
 		<>
 			<HeaderContainer>
-				<h1>WebToolbox</h1>
+				<Link href="/">
+				  <h1>WebToolbox</h1>
+				</Link>
 				<HamburgerMenu onClick={() => handleModalClick()} />
 			</HeaderContainer>
 			<HeaderMenu openModal={openModal}/>

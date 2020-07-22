@@ -18,6 +18,7 @@ export default createGlobalStyle`
     }
 
     :root {
+        --body-color: #e6e6e6;
         --text-gray: #6a6a6a;
         --light-gray: #fafafa;
         --gray: #696969;

@@ -8,7 +8,7 @@ import Header from './Header';
 import GlobalStyle from '../../global/styles';
 
 interface IProps {
-	title: string,
+	title?: string,
 	description?: string,
 	url?: string,
 	ogImage?: string,
@@ -25,4 +25,5 @@ const Layout = (props: IProps) => (
 	</>
 );
 
-export default Layout;
+
+export default Layout

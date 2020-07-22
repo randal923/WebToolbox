@@ -11,7 +11,7 @@ export default Body;
 
 
 const BodyContainer = styled.div`
-	height: 100vh;
 	max-width: 1200px;
-	background: var(--light-gray);
+	height: 100vh;
+	background: var(--body-color);
 `;
