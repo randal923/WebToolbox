@@ -41,6 +41,10 @@ const HeaderContainer = styled.header`
     h1 {
         margin-left: 20px;
         font-size: 1.6rem;
+
+		:hover {
+			cursor: pointer;
+		}
     }
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import NextHead from 'next/head';
 
-const defaultDescription = '';
+const defaultDescription = 'This is a website that has a veriety of tools to help people with their day to day tasks. One of them is a convert case tool that transform texts.';
 const defaultOGURL = '';
 const defaultOGImage = '/logo.png';
 
@@ -15,7 +15,7 @@ interface IHead {
 const Head = (props: IHead) => (
 	<NextHead>
 		<meta charSet="UTF-8" />
-		<title>{props.title || ''}</title>
+		<title>{props.title || 'WebToolbox'}</title>
 		<meta name="description" content={props.description || defaultDescription} />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 		<link rel="icon" href="/favicon.ico" />

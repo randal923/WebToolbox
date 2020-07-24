@@ -6,6 +6,7 @@ import Header from './Header';
 
 // Styles
 import GlobalStyle from '../../global/styles';
+import styled from 'styled-components';
 
 interface IProps {
 	title?: string,
@@ -16,14 +17,18 @@ interface IProps {
 }
 
 const Layout = (props: IProps) => (
-	<>
+	<LaytoutContainer>
 		<Head title={props.title} description={props.description} url={props.url} ogImage={props.ogImage} />
 		<Header />
 		<Body children={props.children} />
 		<Footer />
 		<GlobalStyle />
-	</>
+	</LaytoutContainer>
 );
 
-
 export default Layout
+
+const LaytoutContainer = styled.div`
+	max-width: 1200px;
+	margin: 0 auto;
+`

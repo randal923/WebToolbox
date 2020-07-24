@@ -21,8 +21,10 @@ export default Carousel;
 
 
 const CarouselContainer = styled.div`
+	background-image: radial-gradient(#D7D7D7 1px, transparent 1px), radial-gradient(#d7d7d7 1px, transparent 1px);
 	background: white;
     height: 200px;
+	border-bottom: 1px solid var(--border);
 `
 
 const slide = keyframes`
@@ -58,7 +60,7 @@ const Slider = styled.div`
 		margin-bottom: 50px;
 		text-align: center;
 		font-size: 2.6rem;
-        color: var(--light-black);
+        color: var(--text-blue);
         font-weight: 700;
 
 		:hover,

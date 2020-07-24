@@ -9,6 +9,8 @@ const FooterContainer = styled.footer`
     align-items: center;
     justify-content: center;
     height: 20px;
+    width: 100%;
     background: var(--light-gray);
     color: var(--light-black);
+    font-size: 0.8rem;
 `;
