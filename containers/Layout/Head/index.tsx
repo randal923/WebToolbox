@@ -20,7 +20,7 @@ const Head = (props: IHead) => (
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta property="og:url" content={props.url || defaultOGURL} />
-		<meta property="og:title" content={props.title || ''} />
+		<meta property="og:title" content={props.title || 'WebToolbox'} />
 		<meta property="og:description" content={props.description || defaultDescription} />
 		<meta property="twitter:site" content={props.url || defaultOGURL} />
 		<meta property="twitter:card" content="summary_large_image" />

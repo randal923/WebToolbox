@@ -55,6 +55,10 @@ const HamburgerMenu = styled.div`
 	height: 2px;
 	background: var(--gray);
 	z-index: 6;
+
+	:hover {
+		cursor: pointer;
+	}
 	::before,
 	::after {
 		content: '';
