@@ -28,7 +28,7 @@ const Head = (props: IHead) => (
 		<meta property="og:image" content={props.ogImage || defaultOGImage} />
 		<meta property="og:image:width" content="600" />
 		<meta property="og:image:height" content="600" />
-		<meta name="google-site-verification" content="_qLxnZbfGYZt7zdIpyG4lPha4yYEi2_wOfo0hDspUIY" />
+		<meta name="google-site-verification" content="t8jjjDICTFZkVSp9v4XR8slHMHgLE0qouFklN4avyzI" />
 		{props.children}
 	</NextHead>
 );
