@@ -47,8 +47,8 @@ const ShowSucess = styled.div`
 	border: 1px solid white;
 	background: var(--button-blue);
 	color: white;
-	position: absolute;
 	text-align: center;
+	position: fixed;
 	top: 0;
 	left: 50%;
 	z-index: 5;

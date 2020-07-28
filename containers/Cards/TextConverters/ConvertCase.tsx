@@ -7,13 +7,15 @@ function ConvertCase() {
         <CardContainer>
             <Card>
                 <Link href="/convert-case">
-                    <div>
-                        <img src="/convert-case.png" title="credit-card" />
-                        <Text>
-                            <h2>Convert Case</h2>
-                            <p>A very handy online text tool where you can change between lower case and upper case letters, where you can capitalize, uncapitalize, convert to mix case and transform your text.</p>
-                        </Text>
-                    </div>
+                    <a>
+						<div>
+							<img src="/convert-case.png" title="credit-card" />
+							<Text>
+								<h2>Convert Case</h2>
+								<p>A very handy online text tool where you can change between lower case and upper case letters, where you can capitalize, uncapitalize, convert to mix case and transform your text.</p>
+							</Text>
+						</div>
+					</a>
                 </Link>
             </Card>
         </CardContainer>

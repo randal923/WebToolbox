@@ -31,7 +31,11 @@ const HeaderMenu = (props: IProps) => {
 						</span>
 						<TextConverter openSubMenu={openSubMenu}>
 							<ul>
-								<li onClick={() => props.handleModalClick()}><Link href="/convert-case">Convert Case</Link></li>
+								<li onClick={() => props.handleModalClick()}>
+									<Link href="/convert-case">
+										<a>Convert Case</a>
+									</Link>
+								</li>
 							</ul>
 						</TextConverter>
 					</li>

@@ -2,7 +2,6 @@ import styled, {css} from 'styled-components';
 import HeaderMenu from './HeaderMenu';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { NONAME } from 'dns';
 
 interface IProps {
 	openModal: boolean;
@@ -24,10 +23,12 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<Link href="/">
-				  	<Logo>
-					  <img src="/logo.png" title="logo" />
-					  <h1>WebToolbox</h1>
-					</Logo>
+				  	<a>
+					  <Logo>
+						  <img src="/logo.png" title="logo" />
+						  <h1>WebToolbox</h1>
+					  </Logo>
+					</a>
 				</Link>
 			  <Hamburger openModal={openModal} onClick={() => handleModalClick()}>
 				   <Menu openModal={openModal}></Menu>
@@ -48,6 +49,11 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     min-height: 70px;
     border-bottom: solid 1px var(--border);
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
 
 `;
 

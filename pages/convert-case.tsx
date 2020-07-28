@@ -58,7 +58,7 @@ export default function ConvertCase () {
     }
 
     function copyToClipboard (): void {
-        navigator.clipboard.writeText(text)
+        navigator.clipboard.writeText(finalText)
         Toast('success', 'Text Copied Successfully!')
     };
 
@@ -83,6 +83,7 @@ export default function ConvertCase () {
                             cols={33}
                             onChange={(e) => handleTextArea(e)}
                             value={text}
+                            id="textArea"
 						></textarea>
                        <WordData>
                             <h4>Word Count: {wordCount}</h4>
