@@ -1,7 +1,13 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import HeaderMenu from './HeaderMenu';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { NONAME } from 'dns';
+
+interface IProps {
+	openModal: boolean;
+	handleModalClick?: () => void;
+}
 
 const Header = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -18,11 +24,16 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<Link href="/">
-				  <h1>WebToolbox</h1>
+				  	<Logo>
+					  <img src="/logo.png" title="logo" />
+					  <h1>WebToolbox</h1>
+					</Logo>
 				</Link>
-				<HamburgerMenu onClick={() => handleModalClick()} />
+			  <Hamburger openModal={openModal} onClick={() => handleModalClick()}>
+				   <Menu openModal={openModal}></Menu>
+			    </Hamburger>
 			</HeaderContainer>
-			<HeaderMenu openModal={openModal}/>
+		  <HeaderMenu openModal={openModal} handleModalClick={handleModalClick}/>
 		</>
 
   );
@@ -35,30 +46,30 @@ const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    min-height: 70px;
     border-bottom: solid 1px var(--border);
 
-    h1 {
-        margin-left: 20px;
-        font-size: 1.6rem;
-
-		:hover {
-			cursor: pointer;
-		}
-    }
 `;
 
 
-const HamburgerMenu = styled.div`
+const Hamburger = styled.div<IProps>`
+	height: 25px;
+	width: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 30px;
-	width: 20px;
-	height: 2px;
-	background: var(--gray);
-	z-index: 6;
-
+	z-index: 15;
 	:hover {
 		cursor: pointer;
 	}
+`;
+
+const Menu = styled.div<IProps>`
+	width: 20px;
+	height: 2px;
+	background: var(--gray);
+	
 	::before,
 	::after {
 		content: '';
@@ -66,6 +77,7 @@ const HamburgerMenu = styled.div`
 		width: 20px;
 		height: 2px;
 		background: var(--gray);
+		transition: transform 0.4s ease-in-out;
 	}
 	::before {
 		transform: translateY(-5px);
@@ -73,4 +85,42 @@ const HamburgerMenu = styled.div`
 	::after {
 		transform: translateY(5px);
 	}
-`;
+
+	${props => {
+		if(props.openModal === true) {
+			return css`
+				background: transparent;
+				::before {
+					transform: rotate(45deg);
+				}
+
+				::after {
+					transform: rotate(-45deg);
+					
+				}
+			`
+		}
+	}}
+`
+
+const Logo = styled.div`
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+		
+	:hover {
+		cursor: pointer;
+	}
+
+	img {
+		height: 30px;
+		
+	}
+
+	h1 {
+        font-size: 1.6rem;
+		:hover {
+			cursor: pointer;
+		}
+    }
+`

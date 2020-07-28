@@ -68,7 +68,7 @@ export default function ConvertCase () {
     }
 
     function getWordCount () {
-        const count = text.split(' ').length
+        const count = text.split('').length
         setWordCount(count)
     }
 
@@ -181,19 +181,32 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
+
     div:first-child {
         width: 90%;
         margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            margin: 10px auto 10px 10px;
+        }
+
         div {
-            margin: 10%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
     }
 
+
     textarea {
         max-width: 100%;
+        margin-top: 20px;
+        min-width: 100%;
 
         :focus {
             outline: 1px solid var(--text-blue);
@@ -209,6 +222,7 @@ const Container = styled.div`
 `
 
 const Buttons = styled.div`
+    margin: 80px 0 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,6 +252,7 @@ const Buttons = styled.div`
 
 const WordData = styled.span`
     display: flex;
+    margin-right: auto;
     h4 {
         font-size: 1.1rem;
         margin-right: 10px;
