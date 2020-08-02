@@ -17,7 +17,7 @@ function CreditCardGenerator () {
 
     useEffect(() => {
         if (cvv === 0) {
-            setCvv(Math.ceil(Math.random() * 1000))
+            setCvv(Math.floor(100 + Math.random() * 1000))
         }
     }, [cardInfo.cvv])
 
