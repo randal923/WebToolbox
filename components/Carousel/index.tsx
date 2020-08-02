@@ -62,12 +62,6 @@ const Slider = styled.div`
 		font-size: 2.6rem;
         color: var(--text-blue);
         font-weight: 700;
-
-		:hover,
-		:focus {
-			color: var(--text-blue);
-			cursor: pointer;
-		}
 	}
 
 	.slider__text-1 {

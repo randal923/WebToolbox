@@ -7,17 +7,27 @@ interface IProps {
 	openModal?: boolean;
 	handleModalClick?: () => void;
 	openSubMenu?: boolean;
+	openCreditCardGenerator?: boolean;
 }
 
 
 const HeaderMenu = (props: IProps) => {
 	const [openSubMenu, setOpenSubMenu] = useState(false);
+	const [openCreditCardGenerator, setOpenCreditCardGenerator] = useState(false);
 
 	function handleSubMenuClick() {
 		if(openSubMenu === false) {
 			setOpenSubMenu(true)
 		} else {
 			setOpenSubMenu(false)
+		}
+	}
+
+	function OpenCreditCardGenerator() {
+		if (openCreditCardGenerator === false) {
+			setOpenCreditCardGenerator(true)
+		} else {
+			setOpenCreditCardGenerator(false)
 		}
 	}
 
@@ -38,6 +48,21 @@ const HeaderMenu = (props: IProps) => {
 								</li>
 							</ul>
 						</TextConverter>
+					</li>
+
+					<li onClick={() => OpenCreditCardGenerator()}>
+						<span>
+							<h5>Generators</h5> {openCreditCardGenerator === true ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
+						</span>
+						<Generators openCreditCardGenerator={openCreditCardGenerator}>
+							<ul>
+								<li onClick={() => props.handleModalClick()}>
+									<Link href="/credit-card-generator">
+										<a>Credit Card Generator</a>
+									</Link>
+								</li>
+							</ul>
+						</Generators>
 					</li>
 				</ul>
 			</HeaderMenuContainer>
@@ -189,6 +214,31 @@ const TextConverter = styled.div<IProps>`
 
 	${props => {
 		if (props.openSubMenu === true) {
+			return css`
+				display: block;
+			`
+		}
+	}}
+`
+
+const Generators = styled.div<IProps>`
+	display: none;
+
+	ul {
+		li {
+			margin-top: 10px !important;
+			border-top: 1px solid var(--border);
+			padding: 5px 0 0 0;
+			border-bottom: 0;
+
+			a {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	${props => {
+		if (props.openCreditCardGenerator === true) {
 			return css`
 				display: block;
 			`

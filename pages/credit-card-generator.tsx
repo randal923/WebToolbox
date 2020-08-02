@@ -128,7 +128,8 @@ function CreditCardGenerator () {
                 </Card>
             </Container>
             <p style={{ margin: '0 25px 0 25px', fontSize: '1.3rem', textAlign: 'center' }}>
-                These credit card numbers <strong>DO NOT</strong> work! Use this credit card generator for testing purposes and bogus data.
+                These are <strong>valid</strong> credit card numbers buy they <strong>DO NOT</strong> work! Use this credit card generator for testing purposes and bogus data.
+               
 			</p>
         </>
 
