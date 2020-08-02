@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 
 interface IProps {
+	className?: string;
 	children?: React.ReactNode;
 }
-const Card = (props: IProps) => <CardContainer>{props.children}</CardContainer>
+const Card = (props: IProps) => <CardContainer className={props.className}>{props.children}</CardContainer>
 
 export default Card;
 

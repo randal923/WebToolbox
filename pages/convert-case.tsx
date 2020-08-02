@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Card from '../components/Card';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Toast from '../components/Toast';
 
 import useDidMountEffect from '../components/Hooks/useDidMountEffect';
@@ -63,13 +63,13 @@ export default function ConvertCase () {
     };
 
     function getCharacterCount() {
-        const count = text.split('').length
-        setCharacterCount(count)
+        const chractherCount = text.split('').length
+        setCharacterCount(chractherCount)
     }
 
     function getWordCount () {
-        const count = text.split('').length
-        setWordCount(count)
+        const wordCount = text.split(' ').length
+        return setWordCount(wordCount)
     }
 
     return (

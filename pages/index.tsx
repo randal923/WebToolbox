@@ -2,15 +2,20 @@ import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import React from 'react';
 import ConvertCase from '../containers/Cards/TextConverters/ConvertCase';
+import CreditCardGenerator from '../containers/Cards/Generators/CreditCardGenrator';
+import {breakpoints} from '../global/breakpoints';
 
 function Home() {
 	return (
 		<>
 			<Advertisement>
-				<h2>advertisement ?</h2>
+				<h2>Your one stop shop for all the tools you need.</h2>
 			</Advertisement>
 			<Carousel />
-			<ConvertCase />
+			<Cards>
+				<ConvertCase />
+				<CreditCardGenerator />
+			</Cards>
 		</>
 	);
 }
@@ -28,5 +33,18 @@ const Advertisement = styled.div`
 
 	h2 {
 		color: var(--text-gray);
+		font-size: 1rem;
+		margin: 0 15px 0 15px;
 	}
 `;
+
+const Cards = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@media(min-width: ${breakpoints.tablet}) {
+		flex-direction: row;
+	}
+`

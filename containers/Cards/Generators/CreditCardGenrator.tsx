@@ -2,27 +2,29 @@ import styled from 'styled-components';
 import Card from '../../../components/Card';
 import Link from 'next/link';
 
-function ConvertCase() {
+function CreditCardGenerator () {
     return (
         <CardContainer>
             <Card>
-                <Link href="/convert-case">
+                <Link href="/credit-card-generator">
                     <a>
-						<div>
-							<img src="/convert-case.png" title="credit-card" />
-							<Text>
-								<h2>Convert Case</h2>
-								<p>A very handy online text tool where you can change between lower case and upper case letters, where you can capitalize, uncapitalize, convert to mix case and transform your text.</p>
-							</Text>
-						</div>
-					</a>
+                        <div>
+                            <img src="/credit-card.png" title="credit-card" />
+                            <Text>
+                                <h2>Credit Card Generator</h2>
+                                <p>
+									Generate credit card numbers for testing purposes or for bogus data in websites where you don't want to put in your real credit card number. These cards do not work.
+                                </p>
+                            </Text>
+                        </div>
+                    </a>
                 </Link>
             </Card>
         </CardContainer>
     )
 }
 
-export default ConvertCase;
+export default CreditCardGenerator;
 
 const CardContainer = styled.div`
 	display: flex;

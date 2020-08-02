@@ -24,6 +24,7 @@ export default createGlobalStyle`
         --gray: #696969;
         --back: black;
         --button-blue: #1983ff;
+        --button-red: red;
         --text-blue: #0070f3;
         --border: #eaeaea;
         --light-black: #111111;
