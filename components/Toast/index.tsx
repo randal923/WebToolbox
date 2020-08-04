@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {keyframes, css} from 'styled-components';
 import { toast } from 'react-toastify';
+import {breakpoints} from '../../global/breakpoints';
 
 interface IProps {
 	type: string
@@ -56,6 +57,12 @@ const ShowSucess = styled.div<IProps>`
 
 	h2 {
 		font-size: 1.2rem;
+	}
+
+	@media(max-width: ${breakpoints.mobileL}){
+		h2{
+			font-size:1.1rem
+		}
 	}
 
 	${(props) => {

@@ -32,6 +32,7 @@ const CardContainer = styled.div`
 	justify-content: center;
 
 	div {
+		width: 280px;
 		:hover {
 			cursor: pointer;
 		}
@@ -63,5 +64,6 @@ const Text = styled.div`
 		font-size: 1.4rem;
 		color: var(--light-black);
 		font-weight: 400;
+		width: 250px;
 	}
 `;

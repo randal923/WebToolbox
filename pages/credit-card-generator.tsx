@@ -3,6 +3,7 @@ import * as generator from 'creditcard-generator';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../global/breakpoints';
+import Toast from '../components/Toast'
 
 function CreditCardGenerator () {
     const [cvv, setCvv] = useState(0);
@@ -58,6 +59,8 @@ function CreditCardGenerator () {
         const month = document.getElementById('month') as HTMLInputElement;
 
         setShowCardInfo(true)
+
+        Toast('success', 'Credit card generated successfully.')
 
         return setCardInfo({
             brand: creditCard.value,
@@ -128,8 +131,8 @@ function CreditCardGenerator () {
                 </Card>
             </Container>
             <p style={{ margin: '0 25px 0 25px', fontSize: '1.3rem', textAlign: 'center' }}>
-                These are <strong>valid</strong> credit card numbers buy they <strong>DO NOT</strong> work! Use this credit card generator for testing purposes and bogus data.
-               
+                These are <strong>valid</strong> credit card numbers but they <strong>DO NOT</strong> work! Use this credit card generator for testing purposes and bogus data.
+                
 			</p>
         </>
 
@@ -185,7 +188,7 @@ const Container = styled.div`
 		align-self: center;
 		text-transform: uppercase;
 		font-weight: bold;
-		border-radius: 5px;
+		border-radius: 2px;
 		outline: none;
 		:hover {
 			cursor: pointer;
@@ -203,6 +206,7 @@ const Container = styled.div`
 		display: flex;
 		flex-direction: column;
 		height: 191px;
+        width:  272px;
 		ul {
 			list-style: none;
 			margin-left: 15px;

@@ -4,12 +4,13 @@ import React from 'react';
 import ConvertCase from '../containers/Cards/TextConverters/ConvertCase';
 import CreditCardGenerator from '../containers/Cards/Generators/CreditCardGenrator';
 import {breakpoints} from '../global/breakpoints';
+import Link from 'next/link';
 
 function Home() {
 	return (
 		<>
 			<Advertisement>
-				<h2>Your one stop shop for all the tools you need.</h2>
+				<h2>Would you like a tool to be added to our website? <Link href="/contact-us"><a>Contact us</a></Link> and let us know.</h2>
 			</Advertisement>
 			<Carousel />
 			<Cards>
@@ -30,11 +31,17 @@ const Advertisement = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 
 	h2 {
 		color: var(--text-gray);
 		font-size: 1rem;
 		margin: 0 15px 0 15px;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--text-blue);
 	}
 `;
 
