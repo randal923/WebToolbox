@@ -64,6 +64,22 @@ const HeaderMenu = (props: IProps) => {
 							</ul>
 						</Generators>
 					</li>
+
+					<li onClick={() => props.handleModalClick()}>
+						<span>
+							<Link href="/contact-us">
+								<a><h5>Contact Us</h5></a>
+							</Link>
+						</span>
+					</li>
+					<li onClick={() => props.handleModalClick()}>
+						<span>
+							<Link href="/about-us">
+								<a><h5>About Us</h5></a>
+							</Link>
+						</span>
+					</li>
+
 				</ul>
 			</HeaderMenuContainer>
 			<BackDrop openModal={props.openModal} onClick={() => props.handleModalClick()}></BackDrop>

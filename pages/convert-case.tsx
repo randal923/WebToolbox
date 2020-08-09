@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Card from '../components/Card';
 import React, { useState, useEffect } from 'react';
 import Toast from '../components/Toast';
-
+import Link from 'next/link';
 import useDidMountEffect from '../components/Hooks/useDidMountEffect';
 
 export default function ConvertCase () {
@@ -99,76 +99,54 @@ export default function ConvertCase () {
 					</div>
 				</Card>
                 <Text>
+                    <h2>Did you find a bug? <Link href="/contact-us"><a>Contact us</a></Link> and let us know.</h2>
                     <h1>Convert Case Tool</h1>
                     <p>
-                        A very handy online text tool where you can change between lower case and upper case letters,
-                        where you can capitalize, uncapitalize, convert to mix case and transform your text.
-                        Explore the options below:
+                        An online text tool that allows you to transform your text the way you want to. You can transform your text 
+                        to sentence case, lower case, uppercase and alternating cases. We explain what each one of these do in more detail down below.
                     </p>
                     <h1>Sentence Case</h1>
                     <p>
-                        The sentence case converter will allow you to paste any text you’d like, and it will automatically 
-                        transform it to a fully formed structured sentence.
-                        <br />
-                        It works by capitalizing the very first letter in each sentence, and will then go on to transform 
-                        the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full 
-                        stop will get converted into an upper case letter.
-
+                        The sentence case will transform any text into a sentence, where the first letter of the paragraph and 
+                        the first letter after every full stop is uppercased. <strong>Let us know through our contact us page if you have found any bugs.</strong>
                         <br />
                         <br />
-                        <strong>This is an example of sentence case.</strong>
+                        <strong>"An example of a sentence case. Uppercase letter after a full stop."</strong>
                     </p>
                     <h1>Lower Case</h1>
                     <p>
-                        If you are wondering how to uncapitalize text, this is exactly what the lower case text converter will allow you to do - it transforms all the letters in your text into lowercase letters. Simply copy the text that you need generating into lower case and paste the text into the box above and select the ‘lower case’ tab.
+                        The lower case will transform any text into lower case. To use it, simply copy your text to the text area above and hit lower case.
 
                         <br />
                         <br />
-                        <strong>this is an example of lower case.</strong>
+                        <strong>an example of lower case text. it's lower case even after a full stop.</strong>
                     </p>
                     <h1>Upper Case</h1>
                     <p>
-                        The upper case transformer will take any text that you have and will generate all the letters into upper case ones. 
-                        It will essentially make all lower case letters into CAPITALS (as well as keep upper case letters as upper case letters).
+                        The upper case will transform any text to uppercase. It will also keep the uppercase letter uppercase.
                         <br />
-                        To do this, you simply have to select the text that you need changing and pasting into the box above and then select the UPPER CASE tab.
+                        To use it, simply copy your text to the text area above and hit uppercase
 
                         <br />
                         <br />
-                        <strong>THIS IS AN EXAMPLE OF UPPER CASE.</strong>
-                    </p>
-                    <h1>Capitalized Case</h1>
-                    <p>
-                        The capitalized case converter will automatically convert the starting letter 
-                        of every word into an upper case and will leave the remaining letters as lower case ones.
-                        <br />
-                        Simply copy the content that you will like to generate into this format, 
-                        then paste into the box form above and select the Capitalized Case tab.
-
-                        <br />
-                        <br />
-                        <strong>This Is An Example Of Capitalized Case</strong>
+                        <strong>AN EXAMPLE OF UPPERCASE TEXT. IT CONTINUOUS TO BE UPPERCASE EVEN AFTER A FULL STOP.</strong>
                     </p>
 
                     <h1>Alternating Case</h1>
                     <p>
-                        The alternating case converter will allow you to transform your text (no matter the current format) 
-                        into text that alternates between lower case and upper case. It will generate a lower case and then 
-                        a capital case letter within the same word.
+                        The alternating inverse case will alternate the cases between lower case and uppercase, <strong>in that order.</strong>
 
                         <br />
                         <br />
-                        <strong>tHiS Is aN ExAmPlE Of aLtErNaTiNg cAsE.</strong>
+                        <strong>aN ExAmPlE Of aLtErNaTiNg cAsE. iT AlTeRnAtEs cAsEs eVeN AfTeR A FuLl sToP.</strong>
                     </p>
 
                     <h1>Inverse Alternating Case</h1>
                     <p>
-                        The inverse alternating case converter will allow you to transform your text (no matter the current format) 
-                        into text that alternates between lower case and upper case starting from the first letter. It will generate a capital letter and then 
-                        a lower case letter within the same word.
+                        The alternating inverse case will alternate the cases between uppercase and lower case, <strong>in that order.</strong>
                         <br />
                         <br />
-                        <strong>ThIs iS An eXaMpLe oF InVeRsE AlTeRnAtInG CaSe</strong>
+                        <strong>An eXaMpLe oF AlTeRnAtInG CaSe. It aLtErNaTeS CaSeS EvEn aFtEr a fUlL StOp.</strong>
                     </p>
                 </Text>
 			</Container>
@@ -271,6 +249,10 @@ const Text = styled.div`
 
     h1 {
         margin: 25px 0 10px 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
     p {
         font-size: 1.2rem;

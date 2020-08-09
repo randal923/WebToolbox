@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../global/breakpoints';
 import Toast from '../components/Toast'
+import Link from 'next/link';
 
 function CreditCardGenerator () {
     const [cvv, setCvv] = useState(0);
@@ -78,9 +79,9 @@ function CreditCardGenerator () {
                     <CreditCard>
                         <label>Brand</label>
                         <select name="creditCard" id="creditCard">
-                            <option value="visa">Visa</option>
-                            <option value="masterCard">Master Card</option>
-                            <option value="amex">Amex</option>
+                            <option value="VISA">Visa</option>
+                            <option value="MasterCard">Master Card</option>
+                            <option value="Amex">Amex</option>
                         </select>
                     </CreditCard>
                     <CVVDATE>
@@ -130,9 +131,12 @@ function CreditCardGenerator () {
                     }
                 </Card>
             </Container>
+            <h2 style={{ margin: '0 25px 15px 25px', fontSize: '1.2rem', textAlign: 'center' }} >Did you find a bug? <Link href="/contact-us"><a>Contact us</a></Link> and let us know.</h2>
             <p style={{ margin: '0 25px 0 25px', fontSize: '1.3rem', textAlign: 'center' }}>
+                Simply choose the credit card brand name, put in any <strong>3</strong> digit <strong>CVV</strong> number you would like, our system auto generates a random number for you though. Choose a <strong>Month</strong> and a <strong>Year</strong> and hit <strong>Generate</strong>.
+                <br />
+                <br />
                 These are <strong>valid</strong> credit card numbers but they <strong>DO NOT</strong> work! Use this credit card generator for testing purposes and bogus data.
-                
 			</p>
         </>
 

@@ -30,11 +30,7 @@ const Head = (props: IHead) => (
 		<meta property="og:image:height" content="600" />
 		<meta name="google-site-verification" content="t8jjjDICTFZkVSp9v4XR8slHMHgLE0qouFklN4avyzI" />
 		<script src="https://smtpjs.com/v3/smtp.js"></script>
-		<script
-			data-ad-client="ca-pub-6526177547431701"
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-		></script>
+		<script data-ad-client="ca-pub-6526177547431701" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script async={true} src="https://www.googletagmanager.com/gtag/js?id=UA-173626709-1"></script>
 		<script
 			dangerouslySetInnerHTML={{

@@ -12,7 +12,9 @@ function ConvertCase() {
 							<img src="/convert-case.png" title="credit-card" />
 							<Text>
 								<h2>Convert Case</h2>
-								<p>A very handy online text tool where you can change between lower case and upper case letters, where you can capitalize, uncapitalize, convert to mix case and transform your text.</p>
+								<p>A text tool that allows you to transform texts the way you want to. You can transform your text 
+                        			to sentence case, lower case, uppercase and alternating cases.
+								</p>
 							</Text>
 						</div>
 					</a>

@@ -38,6 +38,15 @@ const contactUs = () => {
         <Container>
             <Card className="card">
                 <h1>Contact Us</h1>
+                <p>
+                    Contat us to report bugs, ask for new tools to be added, or for more information about our services.
+                    <br />
+                    <br />
+                    Fill out the form below and we will get back to you as soon as possible.
+                    <br />
+                    <br />
+                    Every field in the form is required.
+                </p>
                 <NameEmail>
                     <Input type="text" label="Name" name="name" onChange={handleOnChange}/>
                     <Input type="email" label="Email" name="email" onChange={handleOnChange}/>
@@ -69,6 +78,10 @@ const Container = styled.div`
             font-size: 1.5rem;
         }
 
+        p {
+            font-size: 1.4rem;
+            margin: 10px 0 10px 20px;
+        }
         button {
             background: var(--button-blue);
             color: white;
