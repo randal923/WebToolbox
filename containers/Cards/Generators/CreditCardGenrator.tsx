@@ -8,15 +8,14 @@ function CreditCardGenerator () {
             <Card>
                 <Link href="/credit-card-generator">
                     <a>
-                        <div>
-                            <img src="/credit-card.png" title="credit-card" />
-                            <Text>
-                                <h2>Credit Card Generator</h2>
-                                <p>
-									Generate credit card numbers for testing purposes or for bogus data in websites where you don't want to put in your real credit card number. These cards do not work.
-                                </p>
-                            </Text>
-                        </div>
+											<img src="/credit-card.png" title="credit-card" />
+											<Text>
+													<h2>Credit Card Generator</h2>
+													<p>
+														Generate credit card numbers for testing purposes or for bogus data in websites where you don't want to put in your real credit card number. 
+														These cards do not work.
+													</p>
+											</Text>
                     </a>
                 </Link>
             </Card>
@@ -47,7 +46,7 @@ const CardContainer = styled.div`
 	}
 `;
 
-const Text = styled.div`
+const Text = styled.header`
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 10px;

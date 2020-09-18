@@ -20,7 +20,7 @@ const Carousel = () => {
 export default Carousel;
 
 
-const CarouselContainer = styled.div`
+const CarouselContainer = styled.header`
 	background-image: radial-gradient(#D7D7D7 1px, transparent 1px), radial-gradient(#d7d7d7 1px, transparent 1px);
 	background: white;
     height: 200px;

@@ -34,7 +34,7 @@ const FooterContainer = styled.footer`
     }
 `;
 
-const Links = styled.div`
+const Links = styled.nav`
     display: flex;
 
     a {

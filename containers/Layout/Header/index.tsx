@@ -32,7 +32,7 @@ const Header = () => {
 				</Link>
 			  <Hamburger openModal={openModal} onClick={() => handleModalClick()}>
 				   <Menu openModal={openModal}></Menu>
-			    </Hamburger>
+			  </Hamburger>
 			</HeaderContainer>
 		  <HeaderMenu openModal={openModal} handleModalClick={handleModalClick}/>
 		</>

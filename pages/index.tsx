@@ -10,7 +10,14 @@ function Home() {
 	return (
 		<>
 			<Advertisement>
-				<h2>Would you like a tool to be added to our website? <Link href="/contact-us"><a>Contact us</a></Link> and let us know.</h2>
+				<h2>Would you like a tool to be added to our website? <Link href="/contact-us"><a><strong>Contact us</strong></a></Link> and let us know.</h2>
+				<h2>
+					To know more about our tools, check out our 
+					
+					<Link href="/blog">
+					  <a> Blog.</a>
+					</Link>
+				</h2>
 			</Advertisement>
 			<Carousel />
 			<Cards>
@@ -24,7 +31,9 @@ function Home() {
 export default Home;
 
 
-const Advertisement = styled.div`
+const Advertisement = styled.aside`
+	display: flex;
+	flex-direction: column;
 	height: 50px;
 	background: var(--light-gray);
 	border-bottom: 1px solid var(--border);
@@ -36,7 +45,7 @@ const Advertisement = styled.div`
 	h2 {
 		color: var(--text-gray);
 		font-size: 1rem;
-		margin: 0 15px 0 15px;
+		margin: 2.5px 15px 2.5px 15px;
 	}
 
 	a {
@@ -45,7 +54,7 @@ const Advertisement = styled.div`
 	}
 `;
 
-const Cards = styled.div`
+const Cards = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -64,6 +64,13 @@ const HeaderMenu = (props: IProps) => {
 							</ul>
 						</Generators>
 					</li>
+					<li onClick={() => props.handleModalClick()}>
+						<span>
+							<Link href="/blog">
+								<a><h5>Blog</h5></a>
+							</Link>
+						</span>
+					</li>
 
 					<li onClick={() => props.handleModalClick()}>
 						<span>
@@ -99,7 +106,7 @@ const slideOut = keyframes`
 	100% {transform: translateX(-200px);}
 `;
 
-const HeaderMenuContainer = styled.div<IProps>`
+const HeaderMenuContainer = styled.nav<IProps>`
 	width: 200px;
 	background: white;
 	border-bottom: solid 1px var(--border);

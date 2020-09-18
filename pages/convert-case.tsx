@@ -239,7 +239,7 @@ const WordData = styled.span`
     }
 `
 
-const Text = styled.div`
+const Text = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;

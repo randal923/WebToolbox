@@ -7,17 +7,16 @@ function ConvertCase() {
         <CardContainer>
             <Card>
                 <Link href="/convert-case">
-                    <a>
-						<div>
-							<img src="/convert-case.png" title="credit-card" />
-							<Text>
-								<h2>Convert Case</h2>
-								<p>A text tool that allows you to transform texts the way you want to. You can transform your text 
-                        			to sentence case, lower case, uppercase and alternating cases.
-								</p>
-							</Text>
-						</div>
-					</a>
+                  <a>
+										<img src="/convert-case.png" title="credit-card" />
+										<Text>
+											<h2>Convert Case</h2>
+											<p>
+												A text tool that allows you to transform texts the way you want to. You can transform your text 
+												to sentence case, lower case, uppercase and alternating cases.
+											</p>
+										</Text>
+									</a>
                 </Link>
             </Card>
         </CardContainer>
@@ -47,7 +46,7 @@ const CardContainer = styled.div`
 	}
 `;
 
-const Text = styled.div`
+const Text = styled.header`
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 10px;
